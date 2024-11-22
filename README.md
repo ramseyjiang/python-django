@@ -42,3 +42,13 @@ myproject/                # Project Root
 	•	Publishers (Name)
 	•	Styled using Bootstrap 5.3 for responsive design.
 	•	Uses PostgreSQL as the database.
+
+ ## **Setup and Installation**
+ 1. Prerequisites
+	Ensure you have the following installed:
+	•	Docker
+	•	Docker Compose
+
+2. Clone the Repository
+   ```git clone <repository_url>
+   ```cd myproject
