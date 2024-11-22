@@ -45,11 +45,14 @@ myproject/                # Project Root
 
  ## **Setup and Installation**
  1. Prerequisites
-	Ensure you have the following installed:
-	•	Docker
-	•	Docker Compose
+Ensure you have the following installed: Docker and Docker Compose
 
 2. Clone the Repository
    ```
    git clone <repository_url>
    cd myproject
+   ```
+3. Build and Run the Docker Containers
+   ```
+   docker-compose up --build
+   ```
