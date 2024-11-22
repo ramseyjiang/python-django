@@ -50,5 +50,6 @@ myproject/                # Project Root
 	•	Docker Compose
 
 2. Clone the Repository
-   ```git clone <repository_url>
+   ```
+   git clone <repository_url>
    cd myproject
