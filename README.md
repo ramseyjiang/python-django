@@ -56,3 +56,9 @@ Ensure you have the following installed: Docker and Docker Compose
    ```
    docker-compose up --build
    ```
+4. Run Database Migrations
+   Once the containers are running, apply the migrations:
+   ```
+   docker-compose exec web python manage.py makemigrations
+   docker-compose exec web python manage.py migrate
+   ```
