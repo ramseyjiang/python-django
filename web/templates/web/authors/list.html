@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Authors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Authors</h1>
+        <a href="{% url 'author_create' %}" class="btn btn-primary mb-3">Add New Author</a>
+        <a href="{% url 'book_list' %}" class="btn btn-primary mb-3">Go To Books List</a>
+        <a href="{% url 'publisher_list' %}" class="btn btn-primary mb-3">Go To Publishers List</a>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for author in authors %}
+                    <tr>
+                        <td>{{ author.name }}</td>
+                        <td>
+                            <a href="{% url 'author_update' author.pk %}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="{% url 'author_delete' author.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
