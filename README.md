@@ -62,3 +62,11 @@ Ensure you have the following installed: Docker and Docker Compose
    docker-compose exec web python manage.py makemigrations
    docker-compose exec web python manage.py migrate
    ```
+5. Create a Superuser (Optional)
+   To access the Django admin:
+   ```
+   docker-compose exec web python manage.py createsuperuser
+   ```
+6. Access the Application
+   	•	The application will be available at: http://localhost:8000
+	•	Django Admin: http://localhost:8000/admin
