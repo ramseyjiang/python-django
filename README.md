@@ -97,7 +97,7 @@ DATABASES = {
 
 ## **Project Structure Explanation**
 1. Django App Structure (web/)
-
+---
 	•	Models (models.py):
 	•	Author, Publisher, Book models are defined for database interaction.
 	•	Views (views.py):
@@ -105,10 +105,8 @@ DATABASES = {
 	•	Templates (templates/):
 	•	HTML templates for each entity.
 	•	Includes Bootstrap styling for responsiveness.
-
+---
 2. Docker Configuration
-
-	•	Dockerfile:
-Builds a container for the Django app.
-	•	docker-compose.yml:
-Orchestrates the web (Django app) and db (PostgreSQL) containers.
+---
+	•	Dockerfile: Builds a container for the Django app.
+	•	docker-compose.yml: Orchestrates the web (Django app) and db (PostgreSQL) containers.
