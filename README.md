@@ -110,3 +110,27 @@ DATABASES = {
 ---
 	•	Dockerfile: Builds a container for the Django app.
 	•	docker-compose.yml: Orchestrates the web (Django app) and db (PostgreSQL) containers.
+---
+
+
+## **Commands**
+Run the Application
+```
+docker-compose up
+```
+
+Stop the Containers
+```
+docker-compose down
+```
+
+Rebuild the Containers
+```
+docker-compose build --no-cache
+```
+
+Run Migrations
+```
+docker-compose exec web python manage.py makemigrations
+docker-compose exec web python manage.py migrate
+```
