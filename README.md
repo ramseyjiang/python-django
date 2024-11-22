@@ -32,6 +32,7 @@ myproject/                # Project Root
 ├── docker-compose.yml    # Docker Compose configuration
 ├── Dockerfile            # Dockerfile for building the Django app
 ├── db.sqlite3            # SQLite database (only for local use)
+```
 
 
 ## **Features**
