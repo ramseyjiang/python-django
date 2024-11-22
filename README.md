@@ -51,4 +51,4 @@ myproject/                # Project Root
 
 2. Clone the Repository
    ```git clone <repository_url>
-   ```cd myproject
+   cd myproject
