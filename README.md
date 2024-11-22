@@ -67,6 +67,16 @@ Ensure you have the following installed: Docker and Docker Compose
    ```
    docker-compose exec web python manage.py createsuperuser
    ```
+   
 6. Access the Application
+   
    	•	The application will be available at: http://localhost:8000
 	•	Django Admin: http://localhost:8000/admin
+
+  ## **Database Configuration**  
+  The project uses PostgreSQL, configured in docker-compose.yml. Default credentials are:
+  ```
+POSTGRES_DB: myproject
+POSTGRES_USER: myuser
+POSTGRES_PASSWORD: mypassword
+```
