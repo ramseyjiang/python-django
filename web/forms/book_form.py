@@ -1,5 +1,5 @@
 from django import forms
-from .models import Book, Author, Publisher
+from web.models import Book
 
 class BookForm(forms.ModelForm):
     class Meta:
@@ -11,13 +11,3 @@ class BookForm(forms.ModelForm):
                 'type': 'date'  # Makes it a date picker in modern browsers
             }),
         }
-
-class AuthorForm(forms.ModelForm):
-    class Meta:
-        model = Author
-        fields = ['name']
-
-class PublisherForm(forms.ModelForm):
-    class Meta:
-        model = Publisher
-        fields = ['name']
