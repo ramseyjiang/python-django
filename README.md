@@ -134,3 +134,8 @@ Run Migrations
 docker-compose exec web python manage.py makemigrations
 docker-compose exec web python manage.py migrate
 ```
+
+Rebuild the Tests
+```
+docker-compose exec web python manage.py test
+```
