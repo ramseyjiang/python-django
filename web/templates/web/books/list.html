@@ -22,19 +22,23 @@
                 </tr>
             </thead>
             <tbody>
-                {% for book in books %}
-                    <tr>
-                        <td>{{ book.title }}</td>
-                        <td>{{ book.author.name }}</td>
-                        <td>{{ book.publisher.name }}</td>
-                        <td>${{ book.price }}</td>
-                        <td>{{ book.publication_date }}</td>
-                        <td>
-                            <a href="{% url 'book_update' book.pk %}" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="{% url 'book_delete' book.pk %}" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
-                {% endfor %}
+                {% if exist %}
+                  <p class="alert alert-warning">{{ exist }}</p>
+                {% else %}
+                    {% for book in books %}
+                        <tr>
+                            <td>{{ book.title }}</td>
+                            <td>{{ book.author.name }}</td>
+                            <td>{{ book.publisher.name }}</td>
+                            <td>${{ book.price }}</td>
+                            <td>{{ book.publication_date }}</td>
+                            <td>
+                                <a href="{% url 'book_update' book.pk %}" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="{% url 'book_delete' book.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
             </tbody>
         </table>
     </div>

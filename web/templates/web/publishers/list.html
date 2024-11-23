@@ -18,6 +18,9 @@
                 </tr>
             </thead>
             <tbody>
+            {% if exist %}
+              <p class="alert alert-warning">{{ exist }}</p>
+            {% else %}
                 {% for publisher in publishers %}
                     <tr>
                         <td>{{ publisher.name }}</td>
@@ -27,6 +30,7 @@
                         </td>
                     </tr>
                 {% endfor %}
+            {% endif %}
             </tbody>
         </table>
     </div>

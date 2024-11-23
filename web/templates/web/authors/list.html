@@ -18,15 +18,19 @@
                 </tr>
             </thead>
             <tbody>
-                {% for author in authors %}
-                    <tr>
-                        <td>{{ author.name }}</td>
-                        <td>
-                            <a href="{% url 'author_update' author.pk %}" class="btn btn-sm btn-warning">Edit</a>
-                            <a href="{% url 'author_delete' author.pk %}" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
-                {% endfor %}
+                {% if exist %}
+                  <p class="alert alert-warning">{{ exist }}</p>
+                {% else %}
+                    {% for author in authors %}
+                        <tr>
+                            <td>{{ author.name }}</td>
+                            <td>
+                                <a href="{% url 'author_update' author.pk %}" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="{% url 'author_delete' author.pk %}" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
             </tbody>
         </table>
     </div>

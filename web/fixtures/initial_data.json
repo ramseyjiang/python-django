@@ -1,0 +1,27 @@
+[
+    {
+        "model": "web.author",
+        "pk": 1,
+        "fields": {
+            "name": "Default Author"
+        }
+    },
+    {
+        "model": "web.publisher",
+        "pk": 1,
+        "fields": {
+            "name": "Default Publisher"
+        }
+    },
+    {
+        "model": "web.book",
+        "pk": 1,
+        "fields": {
+            "title": "Sample Book",
+            "author": 1,
+            "publisher": 1,
+            "price": 19.99,
+            "publication_date": "2024-01-01"
+        }
+    }
+]
