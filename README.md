@@ -139,3 +139,5 @@ Rebuild the Tests
 ```
 docker-compose exec web python manage.py test web.tests
 ```
+
+[![Coverage Status](https://coveralls.io/repos/github/username/repository/badge.svg?branch=main)](https://coveralls.io/github/username/repository?branch=main)
