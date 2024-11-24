@@ -49,7 +49,9 @@ myproject/                # Project Root
 ├── manage.py             # Django management script
 ├── requirements.txt      # Python dependencies
 ├── docker-compose.yml    # Docker Compose configuration
-├── Dockerfile            # Dockerfile for building the Django app
+├── Dockerfile            # Dockerfile for building the Django app、
+├── htmlcov/              # HTML coverage report (generated after coverage html)
+│   ├── index.html        # Main coverage report
 ├── db.sqlite3            # SQLite database (only for local use)
 ```
 
