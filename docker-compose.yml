@@ -19,6 +19,12 @@ services:
       sh -c "coverage run --source='.' manage.py test &&
                    coverage report &&
                    coverage html"
+    environment:
+      DB_NAME: django_db
+      DB_USER: django_user
+      DB_PASSWORD: django_password
+      DB_HOST: db
+      DB_PORT: 5432
 
   db:
     image: postgres:15
