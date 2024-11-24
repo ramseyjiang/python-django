@@ -26,24 +26,40 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up Docker Compose
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.9"
+
+    - name: Install dependencies
       run: |
-        docker-compose down
-        docker-compose up -d --build
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Wait for PostgreSQL
+      run: |
+        until pg_isready -h localhost -p 5432 -U django_user; do
+          echo "Waiting for database...";
+          sleep 1;
+        done
 
     - name: Run migrations
+      env:
+        DATABASE_URL: postgres://django_user:django_password@localhost:5432/django_db
       run: |
-        docker-compose exec web python manage.py makemigrations
-        docker-compose exec web python manage.py migrate
+        python manage.py makemigrations
+        python manage.py migrate
 
     - name: Run tests with coverage
+      env:
+        DATABASE_URL: postgres://django_user:django_password@localhost:5432/django_db
       run: |
-        docker-compose exec web coverage run --source='.' manage.py test
-        docker-compose exec web coverage report
-        docker-compose exec web coverage xml
+        coverage run --source='.' manage.py test
+        coverage report
+        coverage xml
 
     - name: Upload coverage to Coveralls
-      uses: coverallsapp/github-action@v2.3.4
+      uses: coverallsapp/github-action@v2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         path-to-lcov: coverage.xml
