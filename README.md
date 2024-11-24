@@ -166,4 +166,4 @@ Check Tests Coverage
 docker-compose exec web coverage report
 ```
 
-[![Coverage Status](https://coveralls.io/repos/github/username/repository/badge.svg?branch=main)](https://coveralls.io/github/username/repository?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/username/repository/badge.svg?branch=main)](https://coveralls.io/github/ramseyjiang/python-django?branch=master)
