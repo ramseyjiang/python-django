@@ -161,4 +161,9 @@ Rebuild the Tests
 docker-compose exec web python manage.py test web.tests
 ```
 
+Check Tests Coverage
+```
+docker-compose exec web coverage report
+```
+
 [![Coverage Status](https://coveralls.io/repos/github/username/repository/badge.svg?branch=main)](https://coveralls.io/github/username/repository?branch=main)
