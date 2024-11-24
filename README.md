@@ -50,10 +50,6 @@ myproject/                # Project Root
 ├── requirements.txt      # Python dependencies
 ├── docker-compose.yml    # Docker Compose configuration
 ├── Dockerfile            # Dockerfile for building the Django app
-├── .coveragerc           # Coverage configuration file
-├── pytest.ini            # Pytest configuration (optional)
-├── htmlcov/              # HTML coverage report (generated after coverage html)
-│   ├── index.html        # Main coverage report
 ├── db.sqlite3            # SQLite database (only for local use)
 ```
 
