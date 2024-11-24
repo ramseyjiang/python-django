@@ -17,20 +17,43 @@ myproject/                # Project Root
 │   ├── wsgi.py           # WSGI application
 ├── web/                  # Django app folder
 │   ├── migrations/       # Database migrations
+│   │   ├── __init__.py   # Initialization file for migrations
 │   ├── static/           # Static files (CSS, JS, etc.)
 │   ├── templates/        # HTML templates
 │   │   ├── books/        # Templates for Books CRUD
 │   │   ├── authors/      # Templates for Authors CRUD
 │   │   ├── publishers/   # Templates for Publishers CRUD
+│   ├── models/           # Modularized models
+│   │   ├── __init__.py   # Imports all models
+│   │   ├── author.py     # Author model
+│   │   ├── publisher.py  # Publisher model
+│   │   ├── book.py       # Book model
+│   ├── views/            # Modularized views
+│   │   ├── __init__.py   # Imports all views
+│   │   ├── author_views.py # Views for Author CRUD
+│   │   ├── publisher_views.py # Views for Publisher CRUD
+│   │   ├── book_views.py # Views for Book CRUD
+│   ├── forms/            # Modularized forms
+│   │   ├── __init__.py   # Imports all forms
+│   │   ├── author_form.py # Form for Author
+│   │   ├── publisher_form.py # Form for Publisher
+│   │   ├── book_form.py  # Form for Book
+│   ├── tests/            # Modularized tests
+│   │   ├── __init__.py   # Imports all test modules
+│   │   ├── test_models.py # Unit tests for models
+│   │   ├── test_views.py # Unit tests for views
+│   │   ├── test_forms.py # Unit tests for forms
 │   ├── admin.py          # Admin interface
 │   ├── apps.py           # App configuration
-│   ├── models.py         # Database models
-│   ├── views.py          # Views (CRUD operations)
 │   ├── urls.py           # App-specific URL routing
 ├── manage.py             # Django management script
 ├── requirements.txt      # Python dependencies
 ├── docker-compose.yml    # Docker Compose configuration
 ├── Dockerfile            # Dockerfile for building the Django app
+├── .coveragerc           # Coverage configuration file
+├── pytest.ini            # Pytest configuration (optional)
+├── htmlcov/              # HTML coverage report (generated after coverage html)
+│   ├── index.html        # Main coverage report
 ├── db.sqlite3            # SQLite database (only for local use)
 ```
 
