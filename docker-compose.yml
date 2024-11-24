@@ -9,12 +9,16 @@ services:
       - "8000:8000"
     volumes:
       - .:/app
+      - ./htmlcov:/app/htmlcov
     depends_on:
       - db
     command: >
       sh -c "python manage.py migrate &&
              python manage.py loaddata initial_data.json &&
              python manage.py runserver 0.0.0.0:8000"
+      sh -c "coverage run --source='.' manage.py test &&
+                   coverage report &&
+                   coverage html"
 
   db:
     image: postgres:15
