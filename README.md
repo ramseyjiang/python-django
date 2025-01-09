@@ -135,12 +135,12 @@ DATABASES = {
 
 
 ## **Commands**
-Run the Application
+Run the Application, start all services on docker
 ```
 docker-compose up
 ```
 
-Stop the Containers
+Stop all services on docker Containers
 ```
 docker-compose down
 ```
@@ -164,6 +164,11 @@ docker-compose exec web python manage.py test web.tests
 Check Tests Coverage
 ```
 docker-compose exec web coverage report
+```
+
+Connect the Docker Database
+```
+docker exec -it django-book-db-1 psql -U django_user -d django_db
 ```
 
 [![Coverage Status](https://coveralls.io/repos/github/ramseyjiang/python-django/badge.svg?branch=master)](https://coveralls.io/github/ramseyjiang/python-django?branch=master)
