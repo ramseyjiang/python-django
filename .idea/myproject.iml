@@ -16,7 +16,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/localenv/include/python3.12" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.9 (myproject)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (python-coding-exercise)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="bootstrap" level="application" />
   </component>
