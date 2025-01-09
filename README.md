@@ -137,7 +137,7 @@ DATABASES = {
 ## **Commands**
 Run the Application, start all services on docker
 ```
-docker-compose up
+docker-compose up -d
 ```
 
 Stop all services on docker Containers
